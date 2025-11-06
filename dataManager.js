@@ -21,7 +21,53 @@ class DataManager {
     this.banned = this.loadJSON(this.bannedFile, {});
     this.warnings = this.loadJSON(this.warningsFile, {});
     this.warningKeywords = this.loadJSON(this.warningKeywordsFile, {
-      global: []
+      global: [
+        // Tagalog vulgar words
+        "tangina", "tanginamo", "tang ina", "tang ina mo", "tanginang", "putang ina", "putangina", 
+        "putanginamo", "puta", "gago", "gagong", "tarantado", "tanga", "bobo", "ulol", 
+        "kingina", "potangina", "potanginamo", "kantot", "kantutan", "pakyu", "pak yu", "pakyou", 
+        "pak you", "pokpok", "bilat", "pekpek", "tite", "tamod", "jakol", "salsal", "chupa", 
+        "suso", "dede", "etits", "burat", "bayag", "pepe", "kiki", "tarantadong", 
+        "walang hiya", "punyeta", "tanga ka",
+        "gago ka", "kupal", "tarantaduhay", "ogag",
+        
+        // English vulgar words
+        "fuck", "fck", "fuk", "fvck", "phuck", "fucker", "fucking", "fucked", "fuckboy", 
+        "motherfucker", "motherfucking", "fuckface", "fuckyou", "fuck you", "fack", "fuk you",
+        "shit", "sht", "shyt", "bullshit", "shitty", "shitface", "dipshit", "shithead",
+        "bitch", "btch", "b1tch", "biatch", "bitchy", "son of a bitch", "bitchass",
+        "ass", "asshole", "arsehole", "arse", "butthole", "asswipe", "asshat", "badass",
+        "dick", "dck", "d1ck", "dickhead", "dicky", "big dick", "small dick",
+        "cock", "cck", "c0ck", "cocksucker", "cocky",
+        "pussy", "pussycat", "psy", "pussi", "pussies",
+        "cunt", "cnt", "c*nt",
+        "whore", "wh0re", "slut", "slvt", "slutty", "hoe", "ho",
+        "bastard", "bstrd", "basterd",
+        "sex", "porn", "porno", "pornography", "xxx",
+        "penis", "vagina", "boobs", "breasts", "tits", "titties", "nipples", "nipple",
+        "anal", "anus", "dildo", "masturbate", "masturbation", "orgasm", "erection",
+        "suck", "blow job", "blowjob", "handjob", "cum", "cumming", "jizz", "sperm",
+        "rape", "rapist", "molest", "retard", "retarded", "faggot", "fag", "gay",
+        "negro", "nigger", "nigga", "n1gga", "n1gger",
+        
+        // Nudity and explicit content
+        "nude", "nudes", "naked", "booty", "ass cheeks", "butt", "buttocks",
+        "horny", "sex tape", "naughty", "nsfw",
+        "stripper", "escort", "prostitute", "brothel", "sexual intercourse",
+        
+        // Common misspellings and variations
+        "fuk u", "fvk", "phuk", "freak you",
+        "shiet", "sheeet", "shiiit", "bs", "bullcrap",
+        "biatch", "beatch", "beach",
+        "azz", "a$$", "a55",
+        "d!ck", "dik", "d*ck",
+        "p*ssy", "pu$$y", "coochie",
+        "h0e", "hore", "wh*re",
+        "fck off", "fuk off", "eff off", "eff you",
+        
+        // Mixed language combinations
+        "tang ina fuck", "putang fuck", "gago fuck", "fuck tang ina"
+      ]
     });
     this.excluded = this.loadJSON(this.excludedFile, {});
     this.admins = this.loadJSON(this.adminsFile, {});
